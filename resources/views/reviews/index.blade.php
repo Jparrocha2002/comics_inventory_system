@@ -52,13 +52,13 @@
                     @include('layouts.partials._deleteModal')                   
 
 <!-- Button to Trigger Delete Confirmation Modal -->
-<form action="{{ route('reviews.destroy', $row->id) }}" method="POST" class="btn btn-danger p-0" id="delete-btn{{$row->id}}">
-  @csrf
-  @method('DELETE')
-  <button type="button" style="width: 30px; height: 30px; display: flex; justify-content: center; align-items: center; border: none; background: none;">
-    <i class="fas fa-trash" style="color: white;" data-toggle="modal" data-target="#deleteModal{{$row->id}}"></i>
-  </button>
-</form>
+              <form action="{{ route('reviews.destroy', $row->id) }}" method="POST" class="btn btn-danger p-0" id="delete-btn{{$row->id}}">
+                @csrf
+                @method('DELETE')
+                <button type="button" style="width: 30px; height: 30px; display: flex; justify-content: center; align-items: center; border: none; background: none;">
+                  <i class="fas fa-trash" style="color: white;" data-toggle="modal" data-target="#deleteModal{{$row->id}}"></i>
+                </button>
+              </form>
                   
                   <!-- <form action="{{ route('comics.destroy', $row->id) }}" method="POST" class="btn btn-danger p-0" onsubmit="return confirm('Delete?')">
                                   @csrf

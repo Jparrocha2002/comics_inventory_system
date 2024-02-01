@@ -12,7 +12,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
             <strong>Choose Avatar</strong>
-        <input type="file" name="avatars" class="form-control-file">    
+        <input type="file" name="avatars" class="form-control-file"> 
         </div>
         </div>
             <div class="col mb-3">

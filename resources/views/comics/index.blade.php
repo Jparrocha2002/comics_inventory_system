@@ -85,7 +85,7 @@
                         <i class="fas fa-trash" style="color: white;" data-toggle="modal" data-target="#deleteModal{{$row->id}}"></i>
                       </button>
                     </form>
-                    @endif           
+                    @endif 
                   <!-- <form action="{{ route('comics.destroy', $row->id) }}" method="POST" class="btn btn-danger p-0" onsubmit="return confirm('Delete?')">
                                   @csrf
                                   @method('DELETE')
