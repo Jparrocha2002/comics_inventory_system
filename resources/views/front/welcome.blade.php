@@ -45,9 +45,9 @@
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec sapien nec massa lobortis fringilla. Nulla facilisi. Sed sit amet nisl euismod, convallis odio sed, fermentum metus.</p>
                         @if (Route::has('login'))
                         @auth
-                        <a class="btn btn-primary btn-xl" href="{{ route('dashboard') }}">Proceed</a>
+                        <a class="btn btn-primary btn-xl" href="{{ route('dashboard') }}">Login</a>
                         @else
-                        <a class="btn btn-primary btn-xl" href="{{ route('login') }}">Proceed</a>
+                        <a class="btn btn-primary btn-xl" href="{{ route('login') }}">Login</a>
                         @endif
                         @endauth
                     </div>

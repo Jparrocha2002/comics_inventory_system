@@ -7,7 +7,7 @@ use App\Http\Controllers\dashboardController;
 use App\Http\Controllers\usersController;
 use App\Http\Controllers\transactionsController;
 use App\Http\Controllers\categoryController;
-use App\Http\Controllers\ReviewsController;
+use App\Http\Controllers\reviewsController;
 
 Route::get('/', function () {
     return view('front.welcome');

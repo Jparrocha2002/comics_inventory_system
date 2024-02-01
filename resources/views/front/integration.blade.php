@@ -16,7 +16,7 @@
     <div class="text-center">
         <p id="quotes" class="display-5">Processing...</p>
         <p id="author" class="display-5" style="font-style: italic"></p>
-        <p id="year" class="display-7" style="font-style: italic"></p>
+        <p id="tags" class="display-7" style="font-style: italic"></p>
         <button class="btn btn-success my-3" id="get">Get</button>
     </div>
     <hr />
@@ -44,7 +44,7 @@
         const quote = data[randomIndex];
         document.querySelector('#quotes').innerText = `'${quote.content || 'Unknown'}'`;
         document.querySelector('#author').innerText = `'${quote.author || 'Unknown'}'`;
-        document.querySelector('#year').innerText = `'${quote.tags || 'Unknown'}'`;
+        document.querySelector('#tags').innerText = `'${quote.tags || 'Unknown'}'`;
     }
 
     document.querySelector('#get').addEventListener('click', getAxiosInspirational);
