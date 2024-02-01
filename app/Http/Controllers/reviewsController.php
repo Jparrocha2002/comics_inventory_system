@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Reviews;
+use App\Models\reviews;
 use App\Models\comics;
 use App\Models\User;
 
@@ -15,7 +15,7 @@ class reviewsController extends Controller
      */
     public function index()
     {
-        $reviews = Reviews::orderBy('created_at', 'DESC')->get();
+        $reviews = reviews::orderBy('created_at', 'DESC')->get();
   
         return view('reviews.index', compact('reviews'));
     }
@@ -41,7 +41,7 @@ class reviewsController extends Controller
      */
     public function store(Request $request)
     {
-        Reviews::create($request->all());
+        reviews::create($request->all());
  
         return redirect()->route('reviews')->with('success', 'Reviews added successfully');
     }
@@ -52,7 +52,7 @@ class reviewsController extends Controller
      */
     public function show(string $id)
     {
-        $reviews = Reviews::findOrFail($id);
+        $reviews = reviews::findOrFail($id);
   
         return view('reviews.show', compact('reviews'));
     }
@@ -62,7 +62,7 @@ class reviewsController extends Controller
      */
     public function edit(string $id)
     {
-        $reviews = Reviews::findOrFail($id);
+        $reviews = reviews::findOrFail($id);
 
         $comics = comics::all();
         
@@ -77,7 +77,7 @@ class reviewsController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $reviews = Reviews::findOrFail($id);
+        $reviews = reviews::findOrFail($id);
   
         $reviews->update($request->all());
   
@@ -88,7 +88,7 @@ class reviewsController extends Controller
      */
     public function destroy(string $id)
     {
-        $reviews = Reviews::findOrFail($id);
+        $reviews = reviews::findOrFail($id);
   
         $reviews->delete();
   
